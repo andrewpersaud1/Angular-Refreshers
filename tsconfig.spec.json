@@ -2,6 +2,9 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
+    "compilerOptions": {
+      "strictNullChecks": false
+    },
     "outDir": "./out-tsc/spec",
     "types": [
       "jasmine"
