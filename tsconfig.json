@@ -6,6 +6,7 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noPropertyAccessFromIndexSignature": true,
+    "noUnusedLocals":false,
     "noImplicitAny": false, //
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
