@@ -1,15 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, OnInit , Input, Output, EventEmitter, ViewEncapsulation} from '@angular/core';
 
 @Component({
   selector: 'favorite',
   templateUrl: './favorite.component.html',
-  styleUrl: './favorite.component.css'
+  styleUrls: ['./favorite.component.css'],
+
+
 })
 
 export class FavoriteComponent {
-  isFavorite: boolean = false;
+
+ @Input('is-favorite') isSelected;
+ @Output('change') click= new EventEmitter();
 
     onClick(){
-      this.isFavorite= !this.isFavorite;
+      this.isSelected= !this.isSelected;
+      this.click.emit({newValue: this.isSelected});
     }
+}
+
+export interface FavoriteChagedEventArgs{
+  newValue: boolean
 }
